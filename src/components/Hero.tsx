@@ -113,9 +113,9 @@ export const Hero: React.FC<HeroProps> = ({ onOrderClick, onVipClick }) => {
                 {/* Featured item image preview */}
                 <div className="relative h-64 sm:h-72 w-full rounded-2xl overflow-hidden group">
                   <img
-                    src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&w=1000&q=85"
-                    alt="Batata Recheada Forno & Recheio"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    src="/assets/aistudio/hero-potato_e5f2646f.jpg"
+                    alt="Batata Recheada Forno & Recheio Real"
+                    className="w-full h-full object-cover object-[center_65%] group-hover:scale-105 transition-transform duration-700"
                   />
                   
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
@@ -123,7 +123,7 @@ export const Hero: React.FC<HeroProps> = ({ onOrderClick, onVipClick }) => {
                   {/* Floating badges */}
                   <div className="absolute top-3 left-3 bg-[#0C0A10]/90 backdrop-blur-md border border-orange-500/40 text-white text-xs font-black px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-lg">
                     <Flame className="w-3.5 h-3.5 text-[#FF5E1A]" />
-                    <span>Forno 220°C Garantido</span>
+                    <span>Forno 220°C Real</span>
                   </div>
 
                   <div className="absolute top-3 right-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-[11px] font-black px-2.5 py-1 rounded-full shadow-lg">
@@ -132,9 +132,9 @@ export const Hero: React.FC<HeroProps> = ({ onOrderClick, onVipClick }) => {
 
                   {/* Bottom overlay inside image */}
                   <div className="absolute bottom-3 left-3 right-3 text-left">
-                    <span className="text-[10px] uppercase font-black tracking-widest text-[#FFA238]">Menu Completo</span>
-                    <h3 className="font-heading font-black text-2xl text-white">AeroChicken & Queijo</h3>
-                    <p className="text-xs text-zinc-300 line-clamp-1">Frango suculento, requeijão cremoso e batata palha estaladiça</p>
+                    <span className="text-[10px] uppercase font-black tracking-widest text-[#FFA238]">Foto Real do Menu</span>
+                    <h3 className="font-heading font-black text-2xl text-white">MeatLove & Bacon em Cubos</h3>
+                    <p className="text-xs text-zinc-300 line-clamp-1">Carne moída apurada, farto bacon fumado crocante e batata palha</p>
                   </div>
                 </div>
 

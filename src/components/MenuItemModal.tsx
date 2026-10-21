@@ -52,25 +52,30 @@ export const MenuItemModal: React.FC<MenuItemModalProps> = ({
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header Image */}
-        <div className="relative h-56 sm:h-64 w-full overflow-hidden">
+        <div className="relative h-64 sm:h-80 w-full overflow-hidden bg-black">
           <img
             src={menu.image}
             alt={menu.name}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-[center_65%]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#14111D] via-transparent to-black/60" />
           
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 rounded-full bg-black/60 hover:bg-black/90 text-white transition-all cursor-pointer"
+            className="absolute top-4 right-4 p-2 rounded-full bg-black/60 hover:bg-black/90 text-white transition-all cursor-pointer z-10"
             aria-label="Fechar"
           >
             <X className="w-5 h-5" />
           </button>
 
-          <div className="absolute top-4 left-4 bg-[#FF5E1A] text-white text-xs font-black px-3 py-1 rounded-full flex items-center gap-1 shadow">
-            <Flame className="w-3.5 h-3.5" />
-            <span>Forno a 220°C</span>
+          <div className="absolute top-4 left-4 flex items-center gap-2 z-10">
+            <div className="bg-[#FF5E1A] text-white text-xs font-black px-3 py-1 rounded-full flex items-center gap-1 shadow">
+              <Flame className="w-3.5 h-3.5" />
+              <span>Forno a 220°C</span>
+            </div>
+            <div className="bg-black/70 backdrop-blur-md text-amber-300 text-[11px] font-bold px-2.5 py-1 rounded-full border border-amber-400/40">
+              📸 Foto Real
+            </div>
           </div>
 
           <div className="absolute bottom-4 left-6 right-6">

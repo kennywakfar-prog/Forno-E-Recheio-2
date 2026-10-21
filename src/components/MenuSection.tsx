@@ -37,21 +37,24 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ onSelectMenu }) => {
             >
               <div>
                 {/* Image & Badges */}
-                <div className="relative h-60 w-full overflow-hidden">
+                <div className="relative h-72 sm:h-80 w-full overflow-hidden bg-black">
                   <img
                     src={menu.image}
                     alt={menu.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-[center_65%] group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#13101C] via-[#13101C]/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#13101C] via-[#13101C]/25 to-transparent" />
 
                   {/* Top Badges */}
-                  <div className="absolute top-3 left-3 flex flex-wrap gap-2">
+                  <div className="absolute top-3 left-3 flex flex-wrap gap-1.5 items-center">
                     {menu.badge && (
                       <span className="bg-gradient-to-r from-orange-600 to-amber-600 text-white text-[11px] font-black px-3 py-1 rounded-full shadow-lg">
                         {menu.badge}
                       </span>
                     )}
+                    <span className="bg-black/75 backdrop-blur-md text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded-full border border-amber-400/40">
+                      📸 Foto Real
+                    </span>
                   </div>
 
                   <div className="absolute top-3 right-3 bg-emerald-500/90 backdrop-blur-sm text-white text-[11px] font-black px-2.5 py-1 rounded-full shadow flex items-center gap-1">
