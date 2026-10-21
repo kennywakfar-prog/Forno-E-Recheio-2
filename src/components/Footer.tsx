@@ -18,11 +18,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAdmin, onOpenVipModal }) =
           {/* Brand Col */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FF5E1A] to-[#FFA238] p-0.5 shadow-[0_0_15px_rgba(255,94,26,0.4)]">
-                <div className="w-full h-full bg-[#120F1A] rounded-[9px] flex items-center justify-center">
-                  <Flame className="w-5 h-5 text-[#FF5E1A]" />
-                </div>
-              </div>
+              <img
+                src="/assets/logo.png"
+                alt="Forno & Recheio Delivery Logo"
+                className="h-12 w-auto object-contain drop-shadow-[0_0_12px_rgba(255,94,26,0.5)]"
+              />
               <span className="font-heading font-black text-xl text-white tracking-tight">
                 Forno <span className="text-[#FF5E1A]">&</span> Recheio
               </span>

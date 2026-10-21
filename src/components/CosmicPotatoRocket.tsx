@@ -3,91 +3,91 @@ import React from 'react';
 export const CosmicPotatoRocket: React.FC = () => {
   return (
     <div 
-      className="absolute top-28 right-4 md:right-16 lg:right-24 pointer-events-none select-none z-10 opacity-75 hover:opacity-100 transition-opacity"
-      title="Foguete Cósmico de Batata - Entrega Rápida Forno & Recheio"
+      className="absolute top-24 right-4 md:right-16 lg:right-28 pointer-events-none select-none z-10 opacity-85 hover:opacity-100 transition-opacity"
+      title="Foguete Forno & Recheio - Entrega Espacial em Guimarães"
     >
       <div className="relative animate-rocket">
-        {/* Glow behind the rocket */}
-        <div className="absolute -inset-4 bg-gradient-to-r from-orange-500/20 to-amber-500/30 rounded-full blur-xl" />
+        {/* Warm thermal pulse aura behind rocket */}
+        <div className="absolute -inset-6 bg-gradient-to-r from-orange-500/30 via-amber-500/40 to-yellow-500/20 rounded-full blur-2xl animate-pulse" />
 
         <svg 
-          className="w-24 h-24 md:w-32 md:h-32 drop-shadow-[0_0_15px_rgba(255,162,56,0.6)]" 
-          viewBox="0 0 120 120" 
+          className="w-28 h-28 md:w-36 md:h-36 drop-shadow-[0_0_20px_rgba(255,162,56,0.7)]" 
+          viewBox="0 0 140 140" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* Flame propulsion tail */}
+          {/* Flame propulsion tail matching brand logo */}
           <path 
-            d="M25 85 Q15 95 8 115 Q30 102 38 88 Z" 
-            fill="url(#flameGrad1)" 
+            d="M32 96 Q14 110 4 134 Q28 120 44 104 Z" 
+            fill="url(#brandFlame1)" 
             className="animate-pulse"
           />
           <path 
-            d="M30 82 Q22 92 18 108 Q32 98 40 84 Z" 
-            fill="url(#flameGrad2)" 
+            d="M36 92 Q22 104 14 124 Q32 112 46 98 Z" 
+            fill="url(#brandFlame2)" 
           />
-
-          {/* Golden Baked Potato Body */}
           <path 
-            d="M35 80 C20 65 30 35 55 22 C80 10 102 25 106 50 C108 70 85 95 55 92 C42 91 38 86 35 80 Z" 
-            fill="url(#potatoSkinGrad)" 
-            stroke="#92400E" 
-            strokeWidth="2.5"
+            d="M40 88 Q30 96 24 110 Q38 102 48 94 Z" 
+            fill="#FFFBEB" 
           />
 
-          {/* Melted Cheese Filling Core */}
+          {/* Twinkling star sparks around the rocket */}
+          <path d="M12 40 L15 48 L23 51 L15 54 L12 62 L9 54 L1 51 L9 48 Z" fill="#FDE047" opacity="0.8" className="animate-pulse" />
+          <path d="M115 15 L117 21 L123 23 L117 25 L115 31 L113 25 L107 23 L113 21 Z" fill="#FBBF24" opacity="0.9" />
+          <path d="M126 80 L128 85 L133 87 L128 89 L126 94 L124 89 L119 87 L124 85 Z" fill="#FFA238" opacity="0.85" />
+
+          {/* Rocket Main Hull (Retro warm amber/cream matching logo) */}
           <path 
-            d="M50 35 C65 28 85 36 88 52 C90 65 78 78 60 76 C48 75 42 66 44 52 C45 42 48 38 50 35 Z" 
-            fill="url(#cheeseGrad)" 
+            d="M48 88 C32 72 44 38 78 20 C108 5 125 18 128 44 C130 68 104 98 66 94 C54 93 50 90 48 88 Z" 
+            fill="url(#rocketBodyGrad)" 
+            stroke="#78350F" 
+            strokeWidth="3"
           />
 
-          {/* Crispy bacon and green herbs flakes on potato */}
-          <rect x="58" y="44" width="7" height="3" rx="1.5" fill="#991B1B" transform="rotate(-15 58 44)" />
-          <rect x="70" y="52" width="6" height="3" rx="1.5" fill="#7F1D1D" transform="rotate(25 70 52)" />
-          <circle cx="54" cy="52" r="1.5" fill="#15803D" />
-          <circle cx="75" cy="42" r="1.5" fill="#15803D" />
-          <circle cx="68" cy="62" r="1.5" fill="#16A34A" />
+          {/* Red nose cone */}
+          <path 
+            d="M106 13 C118 18 127 28 128 44 C124 40 114 30 106 13 Z" 
+            fill="#C2410C" 
+            stroke="#78350F" 
+            strokeWidth="2" 
+          />
 
-          {/* Astronaut Glass Visor */}
-          <ellipse cx="78" cy="38" rx="12" ry="9" fill="#0284C7" fillOpacity="0.4" stroke="#E0F2FE" strokeWidth="1.5" transform="rotate(20 78 38)" />
-          <ellipse cx="76" cy="36" rx="4" ry="2" fill="#FFFFFF" fillOpacity="0.8" transform="rotate(20 76 36)" />
+          {/* Turquoise Porthole Windows matching logo */}
+          <circle cx="92" cy="38" r="9" fill="#0D9488" stroke="#78350F" strokeWidth="2.5" />
+          <circle cx="90" cy="36" r="3" fill="#99F6E4" opacity="0.8" />
 
-          {/* Rocket Wing Fin 1 */}
-          <path d="M42 86 L28 100 L44 94 Z" fill="#DC2626" stroke="#991B1B" strokeWidth="1.5" />
-          {/* Rocket Wing Fin 2 */}
-          <path d="M72 82 L78 98 L64 90 Z" fill="#DC2626" stroke="#991B1B" strokeWidth="1.5" />
+          <circle cx="74" cy="52" r="7" fill="#0D9488" stroke="#78350F" strokeWidth="2" />
+          <circle cx="72.5" cy="50.5" r="2" fill="#99F6E4" opacity="0.8" />
 
-          {/* Rocket Thruster Nozzle */}
-          <ellipse cx="36" cy="84" rx="7" ry="4" fill="#4B5563" stroke="#1F2937" strokeWidth="1" transform="rotate(35 36 84)" />
+          {/* Rocket Wing Fin Top */}
+          <path d="M54 40 Q40 30 42 16 Q62 26 66 35 Z" fill="#EA580C" stroke="#78350F" strokeWidth="2.5" />
+          {/* Rocket Wing Fin Bottom */}
+          <path d="M56 90 Q44 104 38 118 Q54 110 68 95 Z" fill="#EA580C" stroke="#78350F" strokeWidth="2.5" />
 
           {/* Gradients */}
           <defs>
-            <linearGradient id="flameGrad1" x1="38" y1="88" x2="8" y2="115" gradientUnits="userSpaceOnUse">
+            <linearGradient id="brandFlame1" x1="44" y1="104" x2="4" y2="134" gradientUnits="userSpaceOnUse">
               <stop stopColor="#FF5E1A" />
-              <stop offset="0.6" stopColor="#FFA238" />
+              <stop offset="0.5" stopColor="#FFA238" />
               <stop offset="1" stopColor="#F59E0B" stopOpacity="0" />
             </linearGradient>
-            <linearGradient id="flameGrad2" x1="40" y1="84" x2="18" y2="108" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#FFFFFF" />
-              <stop offset="0.5" stopColor="#FDE047" />
-              <stop offset="1" stopColor="#FF5E1A" />
-            </linearGradient>
-            <linearGradient id="potatoSkinGrad" x1="30" y1="20" x2="90" y2="90" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#B45309" />
-              <stop offset="0.5" stopColor="#D97706" />
-              <stop offset="1" stopColor="#78350F" />
-            </linearGradient>
-            <linearGradient id="cheeseGrad" x1="45" y1="35" x2="85" y2="75" gradientUnits="userSpaceOnUse">
+            <linearGradient id="brandFlame2" x1="46" y1="98" x2="14" y2="124" gradientUnits="userSpaceOnUse">
               <stop stopColor="#FEF08A" />
-              <stop offset="0.5" stopColor="#FBBF24" />
-              <stop offset="1" stopColor="#F59E0B" />
+              <stop offset="0.6" stopColor="#FF5E1A" />
+              <stop offset="1" stopColor="#DC2626" />
+            </linearGradient>
+            <linearGradient id="rocketBodyGrad" x1="45" y1="20" x2="115" y2="90" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#FDE68A" />
+              <stop offset="0.4" stopColor="#F59E0B" />
+              <stop offset="0.9" stopColor="#D97706" />
             </linearGradient>
           </defs>
         </svg>
 
-        {/* Speed trail tag */}
-        <div className="hidden sm:inline-flex items-center gap-1.5 bg-gradient-to-r from-orange-600/90 to-amber-600/90 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow-lg border border-orange-400/40 backdrop-blur-sm -mt-2 ml-4">
-          <span>🚀 220°C a Jato</span>
+        {/* Floating delivery pill */}
+        <div className="hidden sm:inline-flex items-center gap-1.5 bg-gradient-to-r from-orange-600 via-amber-600 to-orange-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full shadow-lg border border-orange-400/50 backdrop-blur-md -mt-3 ml-4">
+          <span className="animate-spin text-xs">🚀</span>
+          <span>Entrega a Jato em Guimarães</span>
         </div>
       </div>
     </div>

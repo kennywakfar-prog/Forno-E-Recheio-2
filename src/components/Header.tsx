@@ -26,21 +26,23 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Logo & Brand Identity */}
           <div className="flex items-center gap-3">
             <a href="#" className="flex items-center gap-3 group">
-              <div className="relative w-12 h-12 rounded-xl bg-gradient-to-br from-[#FF5E1A] to-[#FFA238] p-0.5 shadow-[0_0_20px_rgba(255,94,26,0.5)] group-hover:shadow-[0_0_30px_rgba(255,94,26,0.8)] transition-all">
-                <div className="w-full h-full bg-[#120F1A] rounded-[10px] flex items-center justify-center overflow-hidden">
-                  <Flame className="w-7 h-7 text-[#FF5E1A] animate-flame" />
-                </div>
+              <div className="relative">
+                <img
+                  src="/assets/logo.png"
+                  alt="Forno & Recheio Delivery Logo"
+                  className="h-14 sm:h-16 w-auto object-contain drop-shadow-[0_0_16px_rgba(255,94,26,0.6)] group-hover:scale-105 group-hover:drop-shadow-[0_0_25px_rgba(255,162,56,0.8)] transition-all"
+                />
                 <div className="absolute -top-1 -right-1 bg-gradient-to-r from-red-600 to-orange-500 text-white font-extrabold text-[9px] px-1.5 py-0.5 rounded-full border border-black shadow">
                   220°C
                 </div>
               </div>
 
-              <div>
+              <div className="hidden sm:block">
                 <span className="font-heading font-black text-xl sm:text-2xl tracking-tight text-white flex items-center gap-1.5">
                   Forno <span className="text-[#FF5E1A]">&</span> Recheio
                 </span>
                 <span className="block text-[11px] font-medium text-amber-200/80 -mt-0.5">
-                  Batatas Recheadas Artesanais
+                  Batatas Recheadas • Creixomil, Guimarães
                 </span>
               </div>
             </a>
