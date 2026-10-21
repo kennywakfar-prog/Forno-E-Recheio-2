@@ -1,0 +1,96 @@
+{
+  "entities": {
+    "VipMember": {
+      "title": "Membro Clube VIP",
+      "description": "Cliente cadastrado no Clube VIP Forno & Recheio com privilégios e checkout rápido",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Nome completo do cliente",
+          "minLength": 2,
+          "maxLength": 100
+        },
+        "phone": {
+          "type": "string",
+          "description": "Número de telemóvel WhatsApp (+351)",
+          "minLength": 9,
+          "maxLength": 25
+        },
+        "address": {
+          "type": "string",
+          "description": "Morada habitual de entrega em Guimarães",
+          "minLength": 3,
+          "maxLength": 250
+        },
+        "birthdayMonth": {
+          "type": "string",
+          "description": "Mês de aniversário para receber mimo",
+          "maxLength": 20
+        },
+        "favoriteFlavor": {
+          "type": "string",
+          "description": "Sabor de batata recheada favorito",
+          "maxLength": 50
+        },
+        "source": {
+          "type": "string",
+          "description": "Origem da inscrição (vip_modal, checkout_optin, etc.)",
+          "maxLength": 30
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Timestamp ISO da criação"
+        }
+      },
+      "required": ["name", "phone", "address", "createdAt"]
+    },
+    "OrderRecord": {
+      "title": "Registo de Pedido",
+      "description": "Registo de pedido gerado para acompanhamento e painel do restaurante",
+      "type": "object",
+      "properties": {
+        "customerName": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 100
+        },
+        "customerPhone": {
+          "type": "string",
+          "minLength": 9,
+          "maxLength": 25
+        },
+        "address": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 250
+        },
+        "summary": {
+          "type": "string",
+          "maxLength": 1000
+        },
+        "total": {
+          "type": "number"
+        },
+        "paymentMethod": {
+          "type": "string",
+          "maxLength": 30
+        },
+        "createdAt": {
+          "type": "string"
+        }
+      },
+      "required": ["customerName", "customerPhone", "address", "total", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/vip_members/{memberId}": {
+      "schema": "VipMember",
+      "description": "Coleção de leads e membros do Clube VIP Forno & Recheio"
+    },
+    "/orders/{orderId}": {
+      "schema": "OrderRecord",
+      "description": "Coleção de pedidos enviados para o forno"
+    }
+  }
+}

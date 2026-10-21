@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #0C0A10;
+    color: #F3F4F6;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+
+  .font-display {
+    font-family: 'Syne', system-ui, sans-serif;
+  }
+}
+
+/* Custom animations for 220°C Oven Atmosphere */
+@keyframes emberFloat {
+  0% {
+    transform: translateY(100vh) translateX(0) scale(0.6);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-20vh) translateX(40px) scale(1.1);
+    opacity: 0;
+  }
+}
+
+@keyframes ovenPulse {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(255, 94, 26, 0.25), inset 0 0 15px rgba(255, 162, 56, 0.15);
+    border-color: rgba(255, 94, 26, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 45px rgba(255, 94, 26, 0.45), inset 0 0 25px rgba(255, 162, 56, 0.25);
+    border-color: rgba(255, 162, 56, 0.8);
+  }
+}
+
+@keyframes rocketOrbit {
+  0% {
+    transform: translate(0, 0) rotate(15deg);
+  }
+  25% {
+    transform: translate(40px, -25px) rotate(25deg);
+  }
+  50% {
+    transform: translate(15px, -50px) rotate(10deg);
+  }
+  75% {
+    transform: translate(-30px, -20px) rotate(0deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(15deg);
+  }
+}
+
+@keyframes flameGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px #FF5E1A);
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 18px #FFA238);
+    transform: scale(1.06);
+  }
+}
+
+.animate-oven-pulse {
+  animation: ovenPulse 3s ease-in-out infinite;
+}
+
+.animate-rocket {
+  animation: rocketOrbit 12s ease-in-out infinite;
+}
+
+.animate-flame {
+  animation: flameGlow 2s ease-in-out infinite;
+}
+
+/* Glass and dark luxury effects */
+.bg-onyx {
+  background-color: #0C0A10;
+}
+
+.bg-onyx-card {
+  background-color: rgba(20, 17, 27, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bg-onyx-card:hover {
+  border-color: rgba(255, 94, 26, 0.35);
+}
+
+.text-gradient-oven {
+  background: linear-gradient(135deg, #FFA238 0%, #FF5E1A 60%, #E03E00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #FDE68A 0%, #F59E0B 50%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0C0A10;
+}
+::-webkit-scrollbar-thumb {
+  background: #252033;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF5E1A;
+}

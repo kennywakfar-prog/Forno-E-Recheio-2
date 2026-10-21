@@ -1,0 +1,45 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isValidString(val, minLen, maxLen) {
+      return val is string && val.size() >= minLen && val.size() <= maxLen;
+    }
+
+    function isValidVipMember(data) {
+      return data.keys().hasAll(['name', 'phone', 'address', 'createdAt'])
+        && isValidString(data.name, 2, 100)
+        && isValidString(data.phone, 8, 30)
+        && isValidString(data.address, 3, 250)
+        && isValidString(data.createdAt, 10, 50);
+    }
+
+    function isValidOrder(data) {
+      return data.keys().hasAll(['customerName', 'customerPhone', 'address', 'total', 'createdAt'])
+        && isValidString(data.customerName, 2, 100)
+        && isValidString(data.customerPhone, 8, 30)
+        && isValidString(data.address, 3, 250)
+        && data.total is number
+        && data.total >= 0
+        && isValidString(data.createdAt, 10, 50);
+    }
+
+    match /vip_members/{memberId} {
+      allow read: if true;
+      allow create: if isValidVipMember(request.resource.data);
+      allow update: if isValidVipMember(request.resource.data);
+      allow delete: if true;
+    }
+
+    match /orders/{orderId} {
+      allow read: if true;
+      allow create: if isValidOrder(request.resource.data);
+      allow update: if isValidOrder(request.resource.data);
+      allow delete: if true;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

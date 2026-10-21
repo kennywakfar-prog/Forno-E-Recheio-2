@@ -1,0 +1,6 @@
+{
+  "name": "Forno & Recheio - Batatas Recheadas Artesanais",
+  "description": "Batatas recheadas artesanais assadas no forno a 220°C em Creixomil, Guimarães. Peça online com entrega rápida e bebida grátis inclusa em todos os menus!",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
